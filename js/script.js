@@ -26,13 +26,13 @@ popupBg.addEventListener('click', () => {
     popupBg.classList.toggle('active')
 }) 
 
-let propertyItems = document.querySelectorAll('.property__item')
+const propertyItems = document.querySelectorAll('.property__item')
 
-let type
-function filter(type){
+ 
+function filter(type, minPrice, maxPrice, minArea, maxArea){
     propertyItems.forEach(propertyItem => {
         propertyItem.classList.remove('hide')
-        if(propertyItem.dataset.type !== type){
+        if((propertyItem.dataset.type !== type & type !== 'all') || propertyItem.dataset.price > maxPrice || propertyItem.dataset.price < minPrice || propertyItem.dataset.area < minArea || propertyItem.dataset.area > maxArea){
             propertyItem.classList.add('hide')
         } 
     })
@@ -42,7 +42,19 @@ function filter(type){
 let filterForm = document.forms.filter
 filterForm.addEventListener('submit', (e)=>{
     e.preventDefault()
-    let type = filterForm.elements.type.value
-    filter(type)
+    let type = filterForm.elements.type.value,
+        minPrice = Number(filterForm.elements.minprice.value || 0),
+        maxPrice = Number(filterForm.elements.maxprice.value || 1000000),
+        minArea = Number(filterForm.elements.minarea.value || 1),
+        maxArea = Number(filterForm.elements.maxarea.value || 10000)
+    console.log("type", type, "minPrice", minPrice, "maxPrice", maxPrice, "minArea", Number(minArea), typeof(minArea), "maxArea", maxArea)
+    filter(type, Number(minPrice), maxPrice, minArea, maxArea)
 
+})
+
+const resetBtn = document.querySelector('.filter__form-reset')
+resetBtn.addEventListener('click', ()=>{
+    propertyItems.forEach(propertyItem => {
+        propertyItem.classList.remove('hide') 
+    })
 })

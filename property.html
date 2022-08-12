@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Недвижимость</title>
+    <title>Недвижимость в Минске и Минской области</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +13,7 @@
         <div class="container">
             <div class="header__wrap">
                 <a href="index.html" class="logo">
-                    <img src="img/logo.svg" alt="" class="logo__img">
+                    Смарт
                 </a>
                 <nav class="menu" id="menu">
                     <ul class="menu__list">
@@ -46,7 +46,11 @@
                         <div class="filter__title">Недвижимость:</div>
                         <div class="filter__box">
                             <div class="filter__box-item">
-                                <input class="filter__box-radio" type="radio" value="flat" id="flat" name="type" checked>
+                                <input class="filter__box-radio" type="radio" value="all" id="all" name="type" checked>
+                                <label class="filter__box-label" for="all">Все</label>
+                            </div>
+                            <div class="filter__box-item">
+                                <input class="filter__box-radio" type="radio" value="flat" id="flat" name="type">
                                 <label class="filter__box-label" for="flat">Квартиры</label>
                             </div>
                             <div class="filter__box-item">
@@ -66,15 +70,15 @@
                     <div class="filter__col">
                         <div class="filter__title">Площадь:</div>
                         <div class="filter__box">
-                            <input min="0" name="min-area" type="number" class="filter__form-input" placeholder="от">
-                            <input min="0" name="max-area" type="number" class="filter__form-input" placeholder="до">
+                            <input min="0" name="minarea" type="number" class="filter__form-input" placeholder="от">
+                            <input min="0" name="maxarea" type="number" class="filter__form-input" placeholder="до">
                         </div>
                     </div>
                     <div class="filter__col">
                         <div class="filter__title">Цена, $:</div>
                         <div class="filter__box">
-                            <input min="0" name="min-price" type="number" class="filter__form-input" placeholder="от">
-                            <input min="0" name="max-price" type="number" class="filter__form-input" placeholder="до">
+                            <input min="0" name="minprice" type="number" class="filter__form-input" placeholder="от">
+                            <input min="0" name="maxprice" type="number" class="filter__form-input" placeholder="до">
                         </div>
                         <button class="filter__form-reset"  type="reset">Сбросить</button><br>
                         <button class="filter__form-btn" type="submit">Поиск</button>
@@ -82,9 +86,9 @@
                 </form>
             </div>
             <div class="property__items">
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="40000" data-area="35">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
                             <div class="property__item-price_byn">100000 BYN</div>
                             <div class="property__item-price_usd">40000 USD</div>
@@ -95,51 +99,51 @@
                         <div class="property__item-desc">35.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="15000" data-area="29">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">34000 BYN</div>
+                            <div class="property__item-price_usd">15000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
                         <div class="property__item-title">1 комнатная квартира г. Дзержинск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-desc">29.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="house">
+                <a href="#" class="property__item" data-type="house" data-price="120000" data-area="135">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/house.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">250000 BYN</div>
+                            <div class="property__item-price_usd">120000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
                         <div class="property__item-title">Дом г. Дзержинск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-desc">135.0/117.2/19.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="commercial" data-price="20000" data-area="44">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/commercial.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">50000 BYN</div>
+                            <div class="property__item-price_usd">20000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
-                        <div class="property__item-title">1 комнатная квартира г. Дзержинск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-title">Офис г. Фаниполь</div>
+                        <div class="property__item-desc">44.0</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="47000" data-area="35">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">105000 BYN</div>
+                            <div class="property__item-price_usd">47000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
@@ -147,35 +151,35 @@
                         <div class="property__item-desc">35.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="room">
+                <a href="#" class="property__item" data-type="room" data-price="10000" data-area="20">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/room.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">25000 BYN</div>
+                            <div class="property__item-price_usd">10000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
                         <div class="property__item-title">Комната г. Минск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-desc">20.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="50000" data-area="55">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">120000 BYN</div>
+                            <div class="property__item-price_usd">50000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
                         <div class="property__item-title">2 комнатная квартира г. Минск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-desc">55.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="40000" data-area="35">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
                             <div class="property__item-price_byn">100000 BYN</div>
                             <div class="property__item-price_usd">40000 USD</div>
@@ -186,9 +190,9 @@
                         <div class="property__item-desc">35.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="40000" data-area="55">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
                             <div class="property__item-price_byn">100000 BYN</div>
                             <div class="property__item-price_usd">40000 USD</div>
@@ -196,25 +200,25 @@
                     </div>
                     <div class="property__item-content">
                         <div class="property__item-title">2 комнатная квартира г. Минск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-desc">55.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="house">
+                <a href="#" class="property__item" data-type="house" data-price="50000" data-area="85">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/house.jpg);"></div>
                         <div class="property__item-price">
-                            <div class="property__item-price_byn">100000 BYN</div>
-                            <div class="property__item-price_usd">40000 USD</div>
+                            <div class="property__item-price_byn">120000 BYN</div>
+                            <div class="property__item-price_usd">50000 USD</div>
                         </div>
                     </div>
                     <div class="property__item-content">
                         <div class="property__item-title">Дом г. Дзержинск ул. Первомайская 12</div>
-                        <div class="property__item-desc">35.0/17.2/9.5</div>
+                        <div class="property__item-desc">85.0/57.2/12.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="40000" data-area="35">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
                             <div class="property__item-price_byn">100000 BYN</div>
                             <div class="property__item-price_usd">40000 USD</div>
@@ -225,9 +229,9 @@
                         <div class="property__item-desc">35.0/17.2/9.5</div>
                     </div>
                 </a>
-                <a href="#" class="property__item" data-type="flat">
+                <a href="#" class="property__item" data-type="flat" data-price="40000" data-area="35">
                     <div class="property__item-header">
-                        <div class="property__item-bg"></div>
+                        <div class="property__item-bg" style="background-image: url(img/flat.jpg);"></div>
                         <div class="property__item-price">
                             <div class="property__item-price_byn">100000 BYN</div>
                             <div class="property__item-price_usd">40000 USD</div>
@@ -251,7 +255,7 @@
             </div>
         </div>
     </main>
-    <div class="callback">
+    <div class="callback property__callback">
         <!--добавить валидацию-->
         <p class="callback__form-title">Остались вопросы? Мы вам перезвоним</p>
         <form class="callback__form" action="#" method="get">
@@ -266,21 +270,17 @@
                 <div class="footer__content">
                     <h2 class="footer__title title">НАШИ КОНТАКТЫ</h2>
                     <div class="footer__content-cols">
+                        
                         <div class="footer__content-col">
-                            <div class="footer__content-item">
-                                <a href="https://yandex.by/maps/-/CCUNQYvogB" class="footer__address" target="_blank">ул. Кальварийская 1, оф. 1 <br> ст.м.Немига</a>
-                            </div>
-                            <div class="footer__content-item">
-                                <a href="mailto:office@rielt.by" class="footer__mail">office@rielt.by</a>
-                            </div>
                             <div class="footer__content-item">
                                 <p class="footer__working-hours">Время работы: <br> с 9:00 до 21:00</p>
                             </div>
-                        </div>
-                        <div class="footer__content-col">
                             <div class="footer__content-item">
                                 <a href="tel:123456789" class="footer_phone">Тел. +123456789</a><br>
                                 <a href="tel:123456789" class="footer_phone">Тел. +123456789</a>
+                            </div>
+                            <div class="footer__content-item">
+                                <a href="mailto:office@rielt.by" class="footer__mail">office@rielt.by</a>
                             </div>
                             <div class="footer__content-item">
                                 <a href="#" class="footer__social">
@@ -289,15 +289,23 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="footer__content-col">
+                            <div class="footer__content-item">
+                                Наш адрес:
+                                <br>
+                                <a href="https://yandex.by/maps/-/CCUNQYvogB" class="footer__address" target="_blank">ул. Кальварийская 1, оф. 1 <br> ст.м.Немига</a>
+                            </div>
+                            <div class="footer__map">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac24a144d5765970cf9c110d0d3dce384e43385ae3bd8b973ca056205f25eb7f3&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+                            </div>
+
+                        </div>
                     </div>
                     <p class="footer__copyright">
-                        Агентство недвижимости "Смарт" <br>
-                        УНП: 1234567; Лицензия: 1234/123, МЮ РБ
+                        Агентство недвижимости "Смарт" УНП: 1234567; Лицензия: 1234/123, МЮ РБ
                     </p>
                 </div>
-                <div class="footer__map">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac24a144d5765970cf9c110d0d3dce384e43385ae3bd8b973ca056205f25eb7f3&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-                </div>
+                
             </div>
 
         </div>
