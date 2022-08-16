@@ -628,8 +628,8 @@ a{
         display: flex;
         gap: 50px;
         margin-bottom: 30px;
-        text-align: center;
         @media  (max-width: 768px){
+            text-align: center;
             flex-direction: column;
             gap: 20px;
         }
@@ -640,7 +640,9 @@ a{
     &__social{
         display: flex;
         gap: 15px;
-        justify-content: center; 
+        @media  (max-width: 768px){ 
+            justify-content: center;  
+        }
     }
     &__copyright{
         font-size: 12px;

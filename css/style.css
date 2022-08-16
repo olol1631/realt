@@ -936,11 +936,11 @@ a {
   display: flex;
   gap: 50px;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
   .footer__content-cols {
+    text-align: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -960,9 +960,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .footer__social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer__copyright {
